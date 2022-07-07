@@ -23,6 +23,14 @@
 
 'use strict';
 
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+// const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
 
-console.log(typeof(numbe165rOfFilms));
+// console.log(typeof(numbe165rOfFilms));
+
+const personalMovieDB = {
+	count: '16',
+	movies: {},
+	actors: {},
+	genres: [],
+	privat: false
+};
