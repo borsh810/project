@@ -26,11 +26,15 @@
 // const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
 
 // console.log(typeof(numbe165rOfFilms));
-
 const personalMovieDB = {
 	count: '16',
-	movies: {},
+	movies: {
+		spider: prompt('Один из последних просмотренных фильмов?'),
+		rate: prompt('На сколько оцените его?')
+	},
 	actors: {},
 	genres: [],
 	privat: false
 };
+
+console.log(personalMovieDB.movies.spider + personalMovieDB.movies.rate);
