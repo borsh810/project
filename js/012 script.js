@@ -21,20 +21,30 @@
 
 Проверить, чтобы все работало без ошибок в консоли */
 
-'use strict';
+// 'use strict';
 
-// const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-// console.log(typeof(numbe165rOfFilms));
-const personalMovieDB = {
-	count: '16',
-	movies: {
-		spider: prompt('Один из последних просмотренных фильмов?'),
-		rate: prompt('На сколько оцените его?')
-	},
-	actors: {},
-	genres: [],
-	privat: false
-};
 
-console.log(personalMovieDB.movies.spider + personalMovieDB.movies.rate);
+
+
+
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+
+// const personalMovieDB = {
+// 	count: numberOfFilms,
+// 	movies: {},
+// 	actors: {},
+// 	genres: [],
+// 	privat: false
+// };
+
+// 	const	a = prompt('Один из последних просмотренных фильмов?'),
+// 		b = prompt('На сколько оцените его?'),
+// 		c = prompt('Один из последних просмотренных фильмов?'),
+// 		d = prompt('На сколько оцените его?');
+// 		personalMovieDB.movies[a] = b;
+// 		personalMovieDB.movies[c] = d;
+
+// 	console.log(personalMovieDB);
