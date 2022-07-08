@@ -40,5 +40,15 @@ const personalMovieDB = {
 		 }
 		}
 
+		if (personalMovieDB.count < 10) {
+			console.log('Malo');
+		} else if (personalMovieDB.count >=10 && personalMovieDB.count <30) {
+			console.log('Norm');
+		} else if(personalMovieDB.count >= 30) {
+			console.log('kinoman');
+		} else{
+			console.log('Net ');
+		}
+
 	console.log(personalMovieDB);
 
