@@ -62,7 +62,7 @@
 // const num = '50';
 
 // switch (num) {
-// 	case '49': 
+// 	case '49':                        -   switch используется только когда = нельзя с <>
 // 		console.log('Neverno');
 // 		break;
 // 	case '100': 

@@ -16,9 +16,8 @@
 
 // Код возьмите из предыдущего домашнего задания
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-
-
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');    
+//   - + перед промпт делает значение числом
 const personalMovieDB = {
 	count: numberOfFilms,
 	movies: {},
@@ -26,93 +25,20 @@ const personalMovieDB = {
 	genres: [],
 	privat: false
 };
-	if (personalMovieDB.count < 10) {
-		console.log('Просмотрено довольно мало фильмов');
-	} else if (personalMovieDB.count === 10, personalMovieDB.count <= 30) {
-		console.log('Вы классический зритель');
-	} else if (personalMovieDB.count > 30) {
-		console.log('Вы киноман');
-	} else {
-		console.log('Произошла ошибка');
-	}
-	const	a = prompt('Один из последних просмотренных фильмов?');
-	for(let i = 0; i<1;i++) {
-		if (a === '') {
-			alert('Ne vozmochno ');
-			prompt('Один из последних просмотренных фильмов?');
-			
-			
-		} else if (a > 50) {
-			alert('Ne vozmochno ');
-			prompt('Один из последних просмотренных фильмов?');
-			
-		} else if (a <= null) {
-			alert('Ne vozmochno ');
-			prompt('Один из последних просмотренных фильмов?');
-			
-		}
-	}
+
+		for (let i = 0; i < 2; i++) {
+			const	a = prompt('Один из последних просмотренных фильмов?', ''),	
+		 b = prompt('На сколько оцените его?', '');
 		
-		const b = prompt('На сколько оцените его?');
-		for(let i = 0; i<1;i++) {
-		if (b === '') {
-			alert('Ne vozmochno ');
-			prompt('На сколько оцените его?');
-			
-		} else if (b > 50) {
-			alert('Ne vozmochno ');
-			prompt('На сколько оцените его?');
-			
-		} else if (a <= null) {
-			alert('Ne vozmochno ');
-			prompt('На сколько оцените его?');
-			
-		}
-	}
-		const c = prompt('Один из последних просмотренных фильмов?');
-		for(let i = 0; i<1;i++) {
-		if (c === '') {
-			alert('Ne vozmochno ');
-			prompt('Один из последних просмотренных фильмов?');
-			
-		} else if (c > 50) {
-			alert('Ne vozmochno ');
-			prompt('Один из последних просмотренных фильмов?');
-			
-		} else if (a <= null) {
-			alert('Ne vozmochno ');
-			prompt('Один из последних просмотренных фильмов?');
-			
-		}
-	}
-		const d = prompt('На сколько оцените его?');
-		for(let i = 0; i<1;i++) {
-		if (d === '') {
-			alert('Ne vozmochno ');
-			prompt('На сколько оцените его?');
-			
-		} else if (d > 50) {
-			alert('Ne vozmochno ');
-			prompt('На сколько оцените его?');
-			
-		} else if (a <= null) {
-			alert('Ne vozmochno ');
-			prompt('На сколько оцените его?');
-			
-		}
-	}
-		// for(let i = 0; i<1;i++) {
-		// 	if (a,b,c,d === '') {
-				
-		// 	}
-		// 	else{
-		// 		alert('Vse good ');
-		// 	}
-			
-		// }
 
+		 if(a != null && b != null && a != '' && b!= '' && a.length < 50) {
+			personalMovieDB.movies[a] = b;
+			console.log('done');
+		 } else {
+			console.log('error');
+			i--;
+		 }
+		}
 
-		personalMovieDB.movies[a] = b;
-		personalMovieDB.movies[c] = d;
 	console.log(personalMovieDB);
 
