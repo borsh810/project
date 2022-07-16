@@ -236,7 +236,7 @@
 // console.log(arr.length);
 // console.log(arr);
 
-// arr.forEach(function(item,i,arr) {
+// arr.forEach(function(item,i,arr) {  -  item это сам элемент внтри массива его пишем первым. i это номер по порядку. 3 это ссылка на массив который мы пребираем
 // 	console.log(`${i}: ${item} внутри массива ${arr}`);
 // });
 
@@ -376,3 +376,142 @@
 // console.log(jonh.armor);
 
 // jonh.sayHello();
+
+// 026 Динамическая типизация
+
+// console.log(typeof(String(null)));
+// console.log(typeof(String(4)));
+
+// console.log(typeof(5 + '') );
+
+// const num = 5;
+
+// console.log('https://instagram.com//catalog/' + num);
+
+// const fontSize = 26 + 'px';
+
+// To Nujmber
+
+//1)
+
+// console.log(typeof(Number('4')));
+
+// 2)
+// console.log(typeof(+'5'));
+
+// 3)
+// console.log(typeof(parseInt('15px', 10) ));
+
+// let answ = +prompt('Hello', '');
+
+// To boolean 
+
+// 0, '' , null, undefined, NaN;  -  всегда false 
+
+// let switcher = null;
+
+// if(switcher) {
+// 	console.log('Working...');
+// }
+
+// switcher = 1;
+
+// if (switcher) {
+// 	console.log('Working...');
+// }
+
+// 2)
+// console.log(typeof(Boolean('4')));
+
+//3)
+// console.log(typeof(!!'4444'));  -  превратит в булиан
+
+// let x = 5;
+// alert(x++);
+// console.log(x);
+
+// console.log([] + false - null + true);
+
+// console.log([] + 1 + 2);
+// console.log('1' + '2');
+
+// alert('1'[0]);
+
+// console.log(2 && 1 && null && 0 && undefined);  -  && запинается на лжи
+// alert( +"Infinity" ); 
+
+// console.log(0 || "" || 2 || undefined || true || false);  -  || запинается на правде
+
+// 028 получение элементов со страницы
+
+// const box = document.getElementById('box');
+
+// console.log(box);
+
+// const btns = document.getElementsByTagName('button')[1]; 
+
+// console.log(btns[1]);
+
+// const circles = document.getElementsByClassName('circle');
+// console.log(circles);
+
+// const hearts = document.querySelectorAll('.heart');
+
+// hearts.forEach(item => {
+// 	console.log(item);
+// });
+
+// const oneHeart = document.querySelector('.heart');
+// console.log(oneHeart);
+
+const box = document.getElementById('box'),
+		btns = document.getElementsByTagName('button'),
+		circles = document.getElementsByClassName('circle'),
+		wrapper = document.querySelector('.wrapper'),
+		hearts = wrapper.querySelectorAll('.heart'),
+		oneHeart = wrapper.querySelector('.heart');
+		
+
+// box.style.backgroundColor = 'blue';
+// box.style.width = '500px';
+
+box.style.cssText = 'background-color: blue; width: 500px';
+
+btns[1].style.borderRadius = '100%';
+circles[0].style.backgroundColor = 'red';
+
+// for (let i = 0; i < hearts.length; i++) {
+// 	hearts[i].style.backgroundColor = 'blue';
+// }
+
+hearts.forEach(item => {
+	item.style.backgroundColor = 'blue';
+});
+
+const div = document.createElement('div');
+// const text = document.createTextNode('Тут был я');
+
+div.classList.add('black');
+
+// document.body.append(div);
+
+wrapper.append(div);
+// wrapper.appendChild(div);
+
+// wrapper.prepend(div);
+
+// hearts[0].before(div);
+// hearts[0].after(div);
+
+// wrapper.insertBefore(div, hearts[0]);  -  более страый
+
+// circles[0].remove();
+// wrapper.removeChild(hearts[1]);  -  более старый
+// hearts[0].replaceWith(circles[0]);
+// wrapper.replaceChild(circles[0], hearts[0]);  - заменяем цирклс на хертс юолее страый
+
+// div.innerHTML = '<h1>Hello wrld</h1>';
+
+// div.textContent = 'Hello';
+
+// div.insertAdjacentHTML('afterend', '<h2>Hello</h2>');
